@@ -1,0 +1,98 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-7rem {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.py-7rem {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+#header {
+  width: 100%;
+  min-height: 70vh;
+  position: relative;
+  background: #a59e9e;
+}
+
+.bg-header, .bg-darked {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  background: red;
+  border-radius: 20%;
+}
+
+.bg-header {
+  background: url("../images/header-bg.webp");
+  background-size: cover;
+  background-position: fixed;
+}
+
+.bg-darked {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-product {
+  width: 1200px;
+  max-width: 100%;
+}
+
+.header-image-inner {
+  margin-top: 50px;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.header-image {
+  max-width: 100%;
+  margin-bottom: -100%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.button-action, .button-transperent {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
+}
+
+.button-action {
+  border: 5px solid #f30;
+  background: #f30;
+}
+
+.button-transperent {
+  border: 5px solid white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.button-action:hover {
+  background: #cc2900;
+}
+
+.button-transperent:hover {
+  background: #232323;
+}
