@@ -100,11 +100,18 @@
   font-weight: 1000;
 }
 
-#pros-1 {
+#pros-1, #pros-2 {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+}
+
+.row-direction:nth-child(2n+1) {
+  flex-direction: row;
+}
+
+.row-direction:nth-child(2n) {
+  flex-direction: row-reverse;
 }
 
 .text-red {
@@ -152,6 +159,10 @@
   vertical-align: middle;
 }
 
+.main-image-even {
+  margin-left: 0;
+}
+
 .minor-image {
   position: absolute;
   left: 10%;
@@ -164,4 +175,9 @@
 }
 .minor-image img {
   max-height: 60vh;
+}
+
+.minor-image-even {
+  left: auto;
+  right: 10%;
 }
