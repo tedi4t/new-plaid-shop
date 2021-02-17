@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  line-height: 1.6rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -100,7 +104,7 @@
   font-weight: 1000;
 }
 
-#pros-1, #pros-2 {
+#pros-1, #pros-2, #pros-3 {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -180,4 +184,8 @@
 .minor-image-even {
   left: auto;
   right: 10%;
+}
+
+.bigger-line-height {
+  line-height: 2rem !important;
 }
