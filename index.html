@@ -219,7 +219,51 @@
       </div>
     </section>
 
+    <section id="orderFormBlock">
+      <h3 class="display-4 text-center py-3 py-sm-4 py-sm-5">Виберіть найкраще для себе</h3>
+      <form class="container" id = "orderForm">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <img src="" alt="в'язане покривало ручної роботи" id="selectedPicture" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div id="errorOrder"></div>
+            <div class="form-group">
+              <label for="sizeSelector">Оберіть розмір</label>
+              <select class="form-control" id="sizeSelector">
+
+              </select>
+            </div>
+            <div class="my-2 my-sm-3 my-md-4" style="font-size: 1.2rem;">
+              Колір: <span id="colorName"></span>
+            </div>
+            <div class="form-group mb-0">
+              <label for="colorSelector">Оберіть колір</label>
+              <div id = "colors" class="colors-block">
+
+              </div>
+            </div>
+            <div class="form-group mt-2 mt-sm-3">
+              <label for="phoneNumber">Номер телефону</label>
+              <input type="text" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="Введіть номер">
+              <small class="text-muted">Ми зв'яжемося з Вами щоб уточнити адресу і деталі доставки</small>
+            </div>
+            <div class="text-right my-2 my-sm-3 my-md-4 text-right" style="font-size: 1.2rem;">
+              Ціна: <span id="orderPrice"></span> гривень
+            </div>
+            <button
+              id="submitOrder"
+              class="button-action w-100 py-2"
+              type="submit"
+            >Оформити замовлення</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
     <!-- Optional JavaScript -->
+    <script src="./bundle.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
