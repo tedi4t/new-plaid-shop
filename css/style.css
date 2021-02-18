@@ -189,3 +189,60 @@ body {
 .bigger-line-height {
   line-height: 2rem !important;
 }
+
+.card {
+  border-radius: 10px;
+}
+.card img {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.card .lot-card-title {
+  font-weight: 800;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.card .lot-card-price {
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.card .button-card {
+  color: #555;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
+  border: 2px solid #555;
+  background: rgba(0, 0, 0, 0);
+}
+.card .button-card:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.card-active {
+  border: 2px solid #f30;
+}
+.card-active .lot-card-title {
+  color: #f30;
+}
+.card-active .button-card {
+  color: white;
+  border: 2px solid #f30;
+  background: #f30;
+}
+.card-active .button-card:hover {
+  background: #cc2900;
+}
