@@ -261,6 +261,31 @@
       </form>
     </section>
 
+    <section id="questionBlock" class="my-3 my-sm-4 my-md-5">
+      <div class="container">
+        <h1 class="text-center pt-2 pt-sm-3 pt-md-4 pb-3 pb-sm-4 pb-md-5 pros-title">Маєте запитання? напишіть нам!</h1>
+        <form id = "questionForm">
+          <div id="errorQuestion"></div>
+          <textarea 
+            placeholder="Ваше запитання"
+            name="question" 
+            id="questionText"
+            rows="6" 
+            class="form-group form-control" 
+          ></textarea>
+          <label for="questionContact">Як ми можемо з Вами зв'язатися?</label>
+          <input 
+            type="text" 
+            class="form-group form-control mb-0" 
+            placeholder="телефон +(380)502033322 - Дмитро"
+            id="questionContact"
+          >
+          <small class="text-muted">Ви також можете зв'язатися з нами за контактами нижче</small>
+          <button class="button-action w-100 mt-2 mt-sm-3" id = "submitQuestion">Задати запитання</button>
+        </form>
+      </div>      
+    </section>
+
     <!-- Optional JavaScript -->
     <script src="./bundle.js"></script>
 

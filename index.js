@@ -180,3 +180,53 @@ const selectImages = fs.readdirSync('./images/orderPictures');
 selectedPicture.src = defaultSelectedPictureSource + selectImages[0];
 const firstImageName = selectImages[0];
 colorTextElement.innerHTML = colorsText[firstImageName];
+
+// HANDLE QUESTION FORM
+const questionForm = document.getElementById('questionForm');
+const questionText = document.getElementById('questionText');
+const questionContact = document.getElementById('questionContact');
+const errorQuestion = document.getElementById('errorQuestion');
+let questionTextValue;
+let questionContactValue;
+questionText.onchange = e => questionTextValue = e.target.value;
+questionContact.onchange = e => questionContactValue = e.target.value;
+
+questionForm.onsubmit = e => {
+  e.preventDefault();
+
+  const props = {
+    question: questionTextValue || '',
+    contact: questionContactValue || '',
+  };
+  const fieldIsEmpty = Object.values(props).some(val => val.length === 0)
+
+  if (fieldIsEmpty) {
+    errorQuestion.innerHTML = `<div class = "text-danger font-weight-bold mb-2">Заповніть усі поля будь ласка</div>`
+  } else {
+    errorQuestion.innerHTML = '';
+    // disable button while is processing
+    const submitQuestionBtn = document.getElementById('submitQuestion');
+    submitQuestionBtn.classList.add('disabled');
+    const submitQuestionBtnHTML = submitQuestionBtn.innerHTML;
+    submitQuestionBtn.innerHTML = 'Оформлення...';
+
+    axios('https://plaid-shop-api.herokuapp.com/question/add' + queryCoder(props), {
+      method: 'post'
+    }).then(() => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Дякуємо за запитання!',
+        html: `
+        <div class = "mt-1 mt-md-3" style = "line-height: 1.5;">
+          В найближчий час з Вами зв'яжуться для відповіді на запитання. Також ви можете зв'язатися з нами за посиланнями, які можете знайти нижче
+        </div>
+        `,
+      });
+      questionForm.reset();
+      submitQuestionBtn.classList.remove('disabled');
+      submitQuestionBtn.innerHTML = submitQuestionBtnHTML;
+    })
+  }
+
+  
+}
