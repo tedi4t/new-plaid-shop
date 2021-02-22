@@ -52,6 +52,10 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.bg-red {
+  background: #f30;
+}
+
 .header-product {
   width: 1200px;
   max-width: 100%;
